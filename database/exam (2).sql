@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2023 at 01:51 PM
+-- Generation Time: Sep 26, 2023 at 03:54 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -83,7 +83,11 @@ CREATE TABLE `examinee_tbl` (
 --
 
 INSERT INTO `examinee_tbl` (`exmne_id`, `exmne_fullname`, `exmne_course`, `exmne_gender`, `exmne_birthdate`, `exmne_year_level`, `exmne_email`, `exmne_password`, `exmne_status`) VALUES
-(10, 'Juan Dela Cruz', '68', 'male', '2023-09-15', 'fourth year', '20_UCS_01@gov.ph', '12345', 'active');
+(10, 'Juan Dela Cruz', '68', 'male', '2023-09-15', 'fourth year', '20_UCS_01@gov.ph', '12345', 'active'),
+(12, 'Josh Dela Cruz', '68', 'male', '2023-09-20', 'first year', '20_UCS_03@gov.ph', '12345', 'active'),
+(13, 'Juan Pablo C.  Dela ', '69', 'male', '2023-09-23', 'first year', '20_UCS_02@gov.ph', '12345', 'active'),
+(15, 'michele ann fernandez', '69', 'female', '2002-01-23', 'first year', '20_UCS_012@gov.ph', '12345', 'active'),
+(16, 'marfael gural', '69', 'male', '2001-03-08', 'first year', '20_UCS_013@gov.ph', '12345', 'active');
 
 -- --------------------------------------------------------
 
@@ -101,6 +105,246 @@ CREATE TABLE `exam_answers` (
   `exans_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `exam_answers`
+--
+
+INSERT INTO `exam_answers` (`exans_id`, `axmne_id`, `exam_id`, `quest_id`, `exans_answer`, `exans_status`, `exans_created`) VALUES
+(324, 11, 28, 78, '(x - 3)(x + 3)', 'new', '2023-09-20 13:06:49'),
+(325, 11, 28, 76, 'x = 2', 'new', '2023-09-20 13:06:49'),
+(326, 11, 28, 68, 'Oxygen', 'new', '2023-09-20 13:06:49'),
+(327, 11, 28, 39, 'Monitor', 'new', '2023-09-20 13:06:49'),
+(328, 11, 28, 81, '1/6', 'new', '2023-09-20 13:06:49'),
+(329, 11, 28, 72, 'Telescope', 'new', '2023-09-20 13:06:49'),
+(330, 11, 28, 58, 'Java', 'new', '2023-09-20 13:06:49'),
+(331, 11, 28, 65, 'Cerebellum', 'new', '2023-09-20 13:06:49'),
+(332, 11, 28, 91, '24', 'new', '2023-09-20 13:06:49'),
+(333, 11, 28, 42, 'Managing computer hardware', 'new', '2023-09-20 13:06:49'),
+(334, 11, 28, 37, ' CPU', 'new', '2023-09-20 13:06:49'),
+(335, 11, 28, 67, '6', 'new', '2023-09-20 13:06:49'),
+(336, 11, 28, 60, 'Geography', 'new', '2023-09-20 13:06:49'),
+(337, 11, 28, 46, 'Managing computer hardware resources', 'new', '2023-09-20 13:06:49'),
+(338, 11, 28, 63, 'Proton', 'new', '2023-09-20 13:06:49'),
+(339, 11, 28, 90, 'Mean', 'new', '2023-09-20 13:06:49'),
+(340, 11, 28, 93, '15', 'new', '2023-09-20 13:06:49'),
+(341, 11, 28, 36, 'TCP/IP', 'new', '2023-09-20 13:06:49'),
+(342, 11, 28, 44, 'Host-To-Host Transfer Protocol', 'new', '2023-09-20 13:06:49'),
+(343, 11, 28, 52, 'HyperText Markup Language', 'new', '2023-09-20 13:06:49'),
+(344, 11, 28, 49, 'Trojan', 'new', '2023-09-20 13:06:49'),
+(345, 11, 28, 77, 'x = 9', 'new', '2023-09-20 13:06:49'),
+(346, 11, 28, 41, 'Microsoft Word', 'new', '2023-09-20 13:06:49'),
+(347, 11, 28, 94, '5', 'new', '2023-09-20 13:06:49'),
+(348, 11, 28, 53, 'Spreadsheet', 'new', '2023-09-20 13:06:49'),
+(349, 11, 28, 50, 'Array', 'new', '2023-09-20 13:06:49'),
+(350, 11, 28, 55, 'Organism', 'new', '2023-09-20 13:06:49'),
+(351, 11, 28, 48, 'Structured Query Language', 'new', '2023-09-20 13:06:49'),
+(352, 11, 28, 64, 'Photosynthesis', 'new', '2023-09-20 13:06:49'),
+(353, 11, 28, 73, '300,000 km/s', 'new', '2023-09-20 13:06:49'),
+(354, 11, 28, 79, '6', 'new', '2023-09-20 13:06:49'),
+(355, 11, 28, 66, 'Photosynthesis', 'new', '2023-09-20 13:06:49'),
+(356, 11, 28, 59, 'Watt', 'new', '2023-09-20 13:06:49'),
+(357, 11, 28, 85, 'Not enough information', 'new', '2023-09-20 13:06:49'),
+(358, 11, 28, 56, 'Kidneys', 'new', '2023-09-20 13:06:49'),
+(359, 11, 28, 83, '28', 'new', '2023-09-20 13:06:49'),
+(360, 11, 28, 51, '1010', 'new', '2023-09-20 13:06:49'),
+(361, 11, 28, 54, 'Central Program Unit', 'new', '2023-09-20 13:06:49'),
+(362, 11, 28, 74, 'Frictional force', 'new', '2023-09-20 13:06:49'),
+(363, 11, 28, 71, 'Oxygen', 'new', '2023-09-20 13:06:49'),
+(364, 11, 28, 95, '9', 'new', '2023-09-20 13:06:50'),
+(365, 11, 28, 84, 'Y', 'new', '2023-09-20 13:06:50'),
+(366, 11, 28, 40, 'Computer Peripheral Unit', 'new', '2023-09-20 13:06:50'),
+(367, 11, 28, 43, 'Limited Area Network', 'new', '2023-09-20 13:06:50'),
+(368, 11, 28, 70, 'H2O', 'new', '2023-09-20 13:06:50'),
+(369, 11, 28, 86, 'Standard error', 'new', '2023-09-20 13:06:50'),
+(370, 11, 28, 47, 'JavaScript', 'new', '2023-09-20 13:06:50'),
+(371, 11, 28, 82, 'SRQR', 'new', '2023-09-20 13:06:50'),
+(372, 11, 28, 88, 'Bar chart', 'new', '2023-09-20 13:06:50'),
+(373, 11, 28, 80, '200', 'new', '2023-09-20 13:06:50'),
+(374, 11, 28, 38, 'Random Access Memory', 'new', '2023-09-20 13:06:50'),
+(375, 11, 28, 92, 'Equilateral', 'new', '2023-09-20 13:06:50'),
+(376, 11, 28, 89, 'The data is perfectly symmetrical', 'new', '2023-09-20 13:06:50'),
+(377, 11, 28, 45, 'Java', 'new', '2023-09-20 13:06:50'),
+(378, 11, 28, 57, 'Uniform Resource Locator', 'new', '2023-09-20 13:06:50'),
+(379, 11, 28, 69, 'Melting', 'new', '2023-09-20 13:06:50'),
+(380, 11, 28, 75, 'Ohm', 'new', '2023-09-20 13:06:50'),
+(381, 11, 28, 87, 'Nominal', 'new', '2023-09-20 13:06:50'),
+(382, 12, 29, 96, 'ss', 'new', '2023-09-20 13:23:23'),
+(383, 12, 29, 97, 'sss', 'new', '2023-09-20 13:23:23'),
+(384, 13, 28, 74, 'Gravitational force', 'new', '2023-09-23 13:43:13'),
+(385, 13, 28, 72, 'Microscope', 'new', '2023-09-23 13:43:13'),
+(386, 13, 28, 64, 'Transpiration', 'new', '2023-09-23 13:43:13'),
+(387, 13, 28, 46, 'Creating virtual machines', 'new', '2023-09-23 13:43:13'),
+(388, 13, 28, 63, 'Neutron', 'new', '2023-09-23 13:43:13'),
+(389, 13, 28, 92, 'Right-angled', 'new', '2023-09-23 13:43:13'),
+(390, 13, 28, 51, '1100', 'new', '2023-09-23 13:43:13'),
+(391, 13, 28, 41, 'Adobe Photoshop', 'new', '2023-09-23 13:43:13'),
+(392, 13, 28, 84, 'B', 'new', '2023-09-23 13:43:13'),
+(393, 13, 28, 83, '36', 'new', '2023-09-23 13:43:13'),
+(394, 13, 28, 90, 'Range', 'new', '2023-09-23 13:43:13'),
+(395, 13, 28, 54, 'Central Program Unit', 'new', '2023-09-23 13:43:13'),
+(396, 13, 28, 82, 'RSPQ', 'new', '2023-09-23 13:43:13'),
+(397, 13, 28, 71, 'Aluminum', 'new', '2023-09-23 13:43:13'),
+(398, 13, 28, 48, 'Sequential Query Language', 'new', '2023-09-23 13:43:13'),
+(399, 13, 28, 94, '7', 'new', '2023-09-23 13:43:13'),
+(400, 13, 28, 52, 'Hardware and Technology Markup Language', 'new', '2023-09-23 13:43:13'),
+(401, 13, 28, 81, '1/2', 'new', '2023-09-23 13:43:13'),
+(402, 13, 28, 86, 'Correlation coefficient', 'new', '2023-09-23 13:43:13'),
+(403, 13, 28, 85, 'B', 'new', '2023-09-23 13:43:13'),
+(404, 13, 28, 50, 'Array', 'new', '2023-09-23 13:43:13'),
+(405, 13, 28, 70, 'CO2', 'new', '2023-09-23 13:43:13'),
+(406, 13, 28, 73, '300,000 km/s', 'new', '2023-09-23 13:43:13'),
+(407, 13, 28, 79, '4', 'new', '2023-09-23 13:43:13'),
+(408, 13, 28, 37, 'RAM', 'new', '2023-09-23 13:43:13'),
+(409, 13, 28, 53, 'Browser', 'new', '2023-09-23 13:43:13'),
+(410, 13, 28, 76, 'x = 4', 'new', '2023-09-23 13:43:13'),
+(411, 13, 28, 89, 'The data is normally distributed', 'new', '2023-09-23 13:43:13'),
+(412, 13, 28, 80, '100', 'new', '2023-09-23 13:43:13'),
+(413, 13, 28, 91, '64', 'new', '2023-09-23 13:43:13'),
+(414, 13, 28, 57, 'Uniform Resource Locator', 'new', '2023-09-23 13:43:13'),
+(415, 13, 28, 68, 'Carbon dioxide', 'new', '2023-09-23 13:43:13'),
+(416, 13, 28, 69, 'Vaporization', 'new', '2023-09-23 13:43:13'),
+(417, 13, 28, 56, 'Kidneys', 'new', '2023-09-23 13:43:13'),
+(418, 13, 28, 49, 'Spyware', 'new', '2023-09-23 13:43:13'),
+(419, 13, 28, 77, 'x = 12', 'new', '2023-09-23 13:43:13'),
+(420, 13, 28, 59, 'Newton', 'new', '2023-09-23 13:43:13'),
+(421, 13, 28, 95, '7', 'new', '2023-09-23 13:43:13'),
+(422, 13, 28, 42, 'Storing and retrieving data', 'new', '2023-09-23 13:43:13'),
+(423, 13, 28, 66, 'Meiosis', 'new', '2023-09-23 13:43:13'),
+(424, 13, 28, 40, 'Computer Peripheral Unit', 'new', '2023-09-23 13:43:13'),
+(425, 13, 28, 44, 'Host-To-Host Transfer Protocol', 'new', '2023-09-23 13:43:13'),
+(426, 13, 28, 67, '6', 'new', '2023-09-23 13:43:13'),
+(427, 13, 28, 88, 'Histogram', 'new', '2023-09-23 13:43:13'),
+(428, 13, 28, 87, 'Ordinal', 'new', '2023-09-23 13:43:13'),
+(429, 13, 28, 36, 'TCP/IP', 'new', '2023-09-23 13:43:13'),
+(430, 13, 28, 60, 'Geology', 'new', '2023-09-23 13:43:13'),
+(431, 13, 28, 38, ' Real-time Access Module', 'new', '2023-09-23 13:43:13'),
+(432, 13, 28, 39, 'Keyboard', 'new', '2023-09-23 13:43:13'),
+(433, 13, 28, 58, 'HTML', 'new', '2023-09-23 13:43:13'),
+(434, 13, 28, 45, 'C++', 'new', '2023-09-23 13:43:13'),
+(435, 13, 28, 55, 'Organism', 'new', '2023-09-23 13:43:13'),
+(436, 13, 28, 78, '(x - 9)(x + 1)', 'new', '2023-09-23 13:43:13'),
+(437, 13, 28, 47, 'Ruby', 'new', '2023-09-23 13:43:13'),
+(438, 13, 28, 75, 'Ampere', 'new', '2023-09-23 13:43:13'),
+(439, 13, 28, 93, '30', 'new', '2023-09-23 13:43:13'),
+(440, 13, 28, 43, 'Local Access Network', 'new', '2023-09-23 13:43:13'),
+(441, 13, 28, 65, 'Hypothalamus', 'new', '2023-09-23 13:43:13'),
+(442, 15, 28, 88, 'Bar chart', 'new', '2023-09-26 07:51:33'),
+(443, 15, 28, 41, 'Windows 10', 'new', '2023-09-26 07:51:33'),
+(444, 15, 28, 74, 'Gravitational force', 'new', '2023-09-26 07:51:33'),
+(445, 15, 28, 91, '32', 'new', '2023-09-26 07:51:33'),
+(446, 15, 28, 58, 'Java', 'new', '2023-09-26 07:51:33'),
+(447, 15, 28, 77, 'x = 3', 'new', '2023-09-26 07:51:33'),
+(448, 15, 28, 37, 'RAM', 'new', '2023-09-26 07:51:33'),
+(449, 15, 28, 81, '1/4', 'new', '2023-09-26 07:51:33'),
+(450, 15, 28, 94, '6', 'new', '2023-09-26 07:51:33'),
+(451, 15, 28, 39, 'Motherboard', 'new', '2023-09-26 07:51:33'),
+(452, 15, 28, 93, '15', 'new', '2023-09-26 07:51:33'),
+(453, 15, 28, 56, 'Liver', 'new', '2023-09-26 07:51:33'),
+(454, 15, 28, 71, 'Oxygen', 'new', '2023-09-26 07:51:33'),
+(455, 15, 28, 85, 'A', 'new', '2023-09-26 07:51:33'),
+(456, 15, 28, 92, 'Isosceles', 'new', '2023-09-26 07:51:33'),
+(457, 15, 28, 73, '300,000 km/s', 'new', '2023-09-26 07:51:33'),
+(458, 15, 28, 95, '9', 'new', '2023-09-26 07:51:33'),
+(459, 15, 28, 45, 'HTML', 'new', '2023-09-26 07:51:33'),
+(460, 15, 28, 86, 'Z-score', 'new', '2023-09-26 07:51:33'),
+(461, 15, 28, 84, 'Z', 'new', '2023-09-26 07:51:33'),
+(462, 15, 28, 46, 'Managing computer hardware resources', 'new', '2023-09-26 07:51:33'),
+(463, 15, 28, 49, 'Virus', 'new', '2023-09-26 07:51:33'),
+(464, 15, 28, 57, 'Uniform Resource Locator', 'new', '2023-09-26 07:51:33'),
+(465, 15, 28, 36, 'TCP/IP', 'new', '2023-09-26 07:51:33'),
+(466, 15, 28, 75, 'Ampere', 'new', '2023-09-26 07:51:33'),
+(467, 15, 28, 44, 'HyperText Transfer Protocol', 'new', '2023-09-26 07:51:33'),
+(468, 15, 28, 59, 'Watt', 'new', '2023-09-26 07:51:33'),
+(469, 15, 28, 65, 'Cerebellum', 'new', '2023-09-26 07:51:33'),
+(470, 15, 28, 63, 'Proton', 'new', '2023-09-26 07:51:33'),
+(471, 15, 28, 54, 'Central Processing Unit', 'new', '2023-09-26 07:51:33'),
+(472, 15, 28, 55, 'Atom', 'new', '2023-09-26 07:51:33'),
+(473, 15, 28, 50, 'Queue', 'new', '2023-09-26 07:51:33'),
+(474, 15, 28, 78, '(x^2 + 9)', 'new', '2023-09-26 07:51:33'),
+(475, 15, 28, 64, 'Fermentation', 'new', '2023-09-26 07:51:33'),
+(476, 15, 28, 68, 'Chlorophyll', 'new', '2023-09-26 07:51:33'),
+(477, 15, 28, 66, 'Meiosis', 'new', '2023-09-26 07:51:33'),
+(478, 15, 28, 76, 'x = 6', 'new', '2023-09-26 07:51:33'),
+(479, 15, 28, 80, '2', 'new', '2023-09-26 07:51:33'),
+(480, 15, 28, 90, 'Median', 'new', '2023-09-26 07:51:33'),
+(481, 15, 28, 52, 'HyperText Markup Language', 'new', '2023-09-26 07:51:33'),
+(482, 15, 28, 79, '8', 'new', '2023-09-26 07:51:33'),
+(483, 15, 28, 67, '6', 'new', '2023-09-26 07:51:33'),
+(484, 15, 28, 48, 'Structured Query Language', 'new', '2023-09-26 07:51:33'),
+(485, 15, 28, 53, 'Antivirus', 'new', '2023-09-26 07:51:33'),
+(486, 15, 28, 40, 'Central Processing Unit', 'new', '2023-09-26 07:51:33'),
+(487, 15, 28, 38, 'Random Access Memory', 'new', '2023-09-26 07:51:33'),
+(488, 15, 28, 47, 'JavaScript', 'new', '2023-09-26 07:51:33'),
+(489, 15, 28, 89, 'The data is highly variable', 'new', '2023-09-26 07:51:33'),
+(490, 15, 28, 83, '28', 'new', '2023-09-26 07:51:33'),
+(491, 15, 28, 87, 'Ordinal', 'new', '2023-09-26 07:51:33'),
+(492, 15, 28, 70, 'H2O', 'new', '2023-09-26 07:51:33'),
+(493, 15, 28, 72, 'Microscope', 'new', '2023-09-26 07:51:33'),
+(494, 15, 28, 82, 'QRSU', 'new', '2023-09-26 07:51:33'),
+(495, 15, 28, 43, 'Local Access Network', 'new', '2023-09-26 07:51:33'),
+(496, 15, 28, 51, '1010', 'new', '2023-09-26 07:51:33'),
+(497, 15, 28, 69, 'Sublimation', 'new', '2023-09-26 07:51:33'),
+(498, 15, 28, 60, 'Geography', 'new', '2023-09-26 07:51:33'),
+(499, 15, 28, 42, 'Managing computer hardware', 'new', '2023-09-26 07:51:33'),
+(500, 16, 28, 63, 'Proton', 'new', '2023-09-26 08:12:40'),
+(501, 16, 28, 81, '1/3', 'new', '2023-09-26 08:12:40'),
+(502, 16, 28, 78, '(x - 9)(x + 1)', 'new', '2023-09-26 08:12:40'),
+(503, 16, 28, 53, 'Firewall', 'new', '2023-09-26 08:12:40'),
+(504, 16, 28, 52, 'HyperText Markup Language', 'new', '2023-09-26 08:12:40'),
+(505, 16, 28, 69, 'Vaporization', 'new', '2023-09-26 08:12:40'),
+(506, 16, 28, 44, 'HyperText Transfer Protocol', 'new', '2023-09-26 08:12:40'),
+(507, 16, 28, 94, '4', 'new', '2023-09-26 08:12:40'),
+(508, 16, 28, 43, 'Local Access Network', 'new', '2023-09-26 08:12:40'),
+(509, 16, 28, 42, 'Storing and retrieving data', 'new', '2023-09-26 08:12:40'),
+(510, 16, 28, 92, 'Scalene', 'new', '2023-09-26 08:12:40'),
+(511, 16, 28, 80, '2', 'new', '2023-09-26 08:12:40'),
+(512, 16, 28, 87, 'Ordinal', 'new', '2023-09-26 08:12:40'),
+(513, 16, 28, 54, 'Central Processing Unit', 'new', '2023-09-26 08:12:40'),
+(514, 16, 28, 91, '32', 'new', '2023-09-26 08:12:40'),
+(515, 16, 28, 45, 'HTML', 'new', '2023-09-26 08:12:40'),
+(516, 16, 28, 67, '12', 'new', '2023-09-26 08:12:40'),
+(517, 16, 28, 75, 'Watt', 'new', '2023-09-26 08:12:40'),
+(518, 16, 28, 38, 'Random Access Memory', 'new', '2023-09-26 08:12:40'),
+(519, 16, 28, 66, 'Embryogenesis', 'new', '2023-09-26 08:12:40'),
+(520, 16, 28, 93, '15', 'new', '2023-09-26 08:12:40'),
+(521, 16, 28, 68, 'Chlorophyll', 'new', '2023-09-26 08:12:40'),
+(522, 16, 28, 56, 'Liver', 'new', '2023-09-26 08:12:40'),
+(523, 16, 28, 70, 'H2O', 'new', '2023-09-26 08:12:40'),
+(524, 16, 28, 73, '300,000 km/s', 'new', '2023-09-26 08:12:40'),
+(525, 16, 28, 36, 'SMTP', 'new', '2023-09-26 08:12:40'),
+(526, 16, 28, 47, 'Python', 'new', '2023-09-26 08:12:40'),
+(527, 16, 28, 85, 'A', 'new', '2023-09-26 08:12:40'),
+(528, 16, 28, 88, 'Pie chart', 'new', '2023-09-26 08:12:40'),
+(529, 16, 28, 86, 'Standard error', 'new', '2023-09-26 08:12:40'),
+(530, 16, 28, 60, 'Geology', 'new', '2023-09-26 08:12:40'),
+(531, 16, 28, 64, 'Photosynthesis', 'new', '2023-09-26 08:12:40'),
+(532, 16, 28, 82, 'QRSU', 'new', '2023-09-26 08:12:40'),
+(533, 16, 28, 84, 'A', 'new', '2023-09-26 08:12:40'),
+(534, 16, 28, 57, 'Universal Request Language', 'new', '2023-09-26 08:12:40'),
+(535, 16, 28, 95, '9', 'new', '2023-09-26 08:12:40'),
+(536, 16, 28, 50, 'Array', 'new', '2023-09-26 08:12:40'),
+(537, 16, 28, 79, '2', 'new', '2023-09-26 08:12:40'),
+(538, 16, 28, 76, 'x = 4', 'new', '2023-09-26 08:12:40'),
+(539, 16, 28, 39, 'Motherboard', 'new', '2023-09-26 08:12:40'),
+(540, 16, 28, 72, 'Telescope', 'new', '2023-09-26 08:12:40'),
+(541, 16, 28, 71, 'Carbon', 'new', '2023-09-26 08:12:40'),
+(542, 16, 28, 65, 'Cerebellum', 'new', '2023-09-26 08:12:40'),
+(543, 16, 28, 55, 'Atom', 'new', '2023-09-26 08:12:40'),
+(544, 16, 28, 51, '1001', 'new', '2023-09-26 08:12:40'),
+(545, 16, 28, 46, 'Tracking changes in source code and collaborating on software projects', 'new', '2023-09-26 08:12:40'),
+(546, 16, 28, 40, 'Central Processing Unit', 'new', '2023-09-26 08:12:40'),
+(547, 16, 28, 49, 'Trojan', 'new', '2023-09-26 08:12:40'),
+(548, 16, 28, 48, 'Structured Query Language', 'new', '2023-09-26 08:12:40'),
+(549, 16, 28, 77, 'x = 3', 'new', '2023-09-26 08:12:40'),
+(550, 16, 28, 59, 'Newton', 'new', '2023-09-26 08:12:40'),
+(551, 16, 28, 83, '30', 'new', '2023-09-26 08:12:40'),
+(552, 16, 28, 89, 'The data is perfectly symmetrical', 'new', '2023-09-26 08:12:40'),
+(553, 16, 28, 74, 'Gravitational force', 'new', '2023-09-26 08:12:40'),
+(554, 16, 28, 41, 'Windows 10', 'new', '2023-09-26 08:12:40'),
+(555, 16, 28, 37, 'Hard Drive', 'new', '2023-09-26 08:12:40'),
+(556, 16, 28, 58, 'Java', 'new', '2023-09-26 08:12:40'),
+(557, 16, 28, 90, 'Median', 'new', '2023-09-26 08:12:40');
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +357,17 @@ CREATE TABLE `exam_attempt` (
   `exam_id` int(11) NOT NULL,
   `examat_status` varchar(1000) NOT NULL DEFAULT 'used'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `exam_attempt`
+--
+
+INSERT INTO `exam_attempt` (`examat_id`, `exmne_id`, `exam_id`, `examat_status`) VALUES
+(57, 11, 28, 'used'),
+(58, 12, 29, 'used'),
+(59, 13, 28, 'used'),
+(60, 15, 28, 'used'),
+(61, 16, 28, 'used');
 
 -- --------------------------------------------------------
 
@@ -194,7 +449,31 @@ INSERT INTO `exam_question_tbl` (`eqt_id`, `exam_id`, `exam_question`, `exam_ch1
 (92, 28, 'If a triangle has sides measuring 3 cm, 4 cm, and 5 cm, what type of triangle is it?', 'Equilateral', 'Isosceles', 'Scalene', 'Right-angled', 'Right-angled', 'active'),
 (93, 28, 'What is 25% of 80?', '15', '20', '25', '30', '20', 'active'),
 (94, 28, 'Solve for x: 2x + 3 = 11.', '4', '5', '6', '7', '5', 'active'),
-(95, 28, 'What is the square root of 81?', '9', '8', '7', '6', '9', 'active');
+(95, 28, 'What is the square root of 81?', '9', '8', '7', '6', '9', 'active'),
+(96, 29, 'as', 'ss', 'ss', 'ss', 's', 's', 'active'),
+(97, 29, 's', 's', 's', 'ss', 'sss', 'ssss', 'active'),
+(98, 28, 'Every time it has rained, the streets have become wet. What can we reasonably conclude? ', 'Rain makes streets wet', 'Streets make rain wet ', 'It will rain tomorrow', 'Streets are always wet', 'Rain makes streets wet', 'active'),
+(99, 28, 'If all philosophers are deep thinkers, and Socrates is a philosopher, what can we conclude?', 'Socrates is not a deep thinker', 'Socrates is a deep thinker', 'Socrates is a scientist', 'Socrates is an artist', 'Socrates is a deep thinker', 'active'),
+(100, 28, 'Tree is to forest as book is to ___?', 'Library', 'Author', 'Page', 'Novel', 'Library', 'active'),
+(101, 28, 'No mammals can fly. All bats are mammals. What can we conclude?', 'Bats can fly', 'Bats cannot fly', 'Some bats can fly', 'All bats are birds', 'Bats cannot fly', 'active'),
+(102, 28, 'All cars in this parking lot are red. John’s car is red. What can we conclude?', 'John’s car is in the parking lot', 'John’s car is not in the parking lot', 'John doesn’t own a car', 'John’s car is blue', 'John’s car is in the parking lot', 'active'),
+(103, 28, 'What does “OR” represent in logic?', 'Logical disjunction', 'Logical conjunction', 'Logical negation', 'Logical equivalence', 'Logical disjunction', 'active'),
+(104, 28, 'What does “AND” represent in logic?', 'Logical disjunction', 'Logical conjunction', 'Logical negation', 'Logical equivalence', 'Logical conjunction', 'active'),
+(105, 28, 'Which of the following is an example of a non-sequitur?', 'If it’s raining, then the ground is wet. The ground is wet, so it’s raining.', 'All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.', 'Cats are mammals. Mammals have lungs. Therefore, cats have lungs.', 'Some dogs are brown. This dog is brown. Therefore, all dogs are brown.', 'Some dogs are brown. This dog is brown. Therefore, all dogs are brown.', 'active'),
+(106, 28, 'What is the purpose of using evidence in an argument?', 'To confuse the reader', 'To persuade the reader emotionally', 'To support the argument with facts and examples', 'To make the argument longer', 'To support the argument with facts and examples', 'active'),
+(107, 28, 'What is the first step in critical thinking when analyzing an argument?', 'Evaluate the evidence', 'Identify the conclusion', 'Determine the author’s intent', 'Assess the credibility of the source', 'Identify the conclusion', 'active'),
+(108, 28, 'If a person argues that we should ban cars because some cars are involved in accidents, which logical fallacy is this?', 'Slippery slope', 'Hasty generalization', 'Ad hominem', 'Appeal to authority', 'Hasty generalization', 'active'),
+(109, 28, 'Which logical fallacy is committed in the following argument: “Everyone’s using social media, so it must be good for you!” ', 'Appeal to popularity', 'Ad hominem', 'Slippery slope', 'Straw man', 'Appeal to popularity', 'active'),
+(110, 28, 'If “some students like math” and “all math enthusiasts study logic,” what can we conclude? ', 'All students like math', 'Some students study logic', 'All logic enthusiasts are students', 'Some students dislike math', 'Some students study logic', 'active'),
+(111, 28, 'If “all birds have wings” and “a penguin is a bird,” what can we conclude about penguins?', 'Penguins have wings', 'Penguins can’t fly', 'Penguins are not birds', 'Penguins are insects', 'Penguins can’t fly', 'active'),
+(112, 28, 'What is the opposite of the statement: “The book is on the table”?', 'The book is not on the table', 'The book is under the table', 'The book is above the table', 'The book is beside the table', 'The book is not on the table', 'active'),
+(113, 28, 'If all humans are mortal, and Socrates is a human, what can you conclude?', 'Socrates is immortal', 'Socrates is mortal', 'Humans are immortal', 'Socrates is a god', 'Socrates is mortal', 'active'),
+(114, 28, 'Which sentence is correctly punctuated?', 'She went to the store; bought eggs, milk, and bread.', 'She went to the store, bought eggs milk and bread.', 'She went to the store bought eggs, milk, and bread.', 'She went to the store bought eggs milk and bread.', 'She went to the store; bought eggs, milk, and bread.', 'active'),
+(115, 28, 'Which storage device is known for its fast data access times and is often used for caching frequently accessed data?', 'Hard Disk Drive (HDD)', 'Solid State Drive (SSD)', 'Optical Drive', 'Floppy Disk', 'Solid State Drive (SSD)', 'active'),
+(116, 28, 'Which of the following is NOT a type of computer network?', 'LAN (Local Area Network)', 'WAN (Wide Area Network)', 'MAN (Metropolitan Area Network) ', 'MAN (Metropolitan Area Network)', 'CPU (Central Processing Unit)', 'active'),
+(117, 28, 'What is the purpose of a router in a computer network?', 'A) To play video games', 'To filter spam emails', 'To connect multiple devices and route data between them', 'To create graphic designs', 'To connect multiple devices and route data between them', 'active'),
+(118, 28, 'Which of the following is not a commonly used programming language?', 'Python', 'Ruby', 'Photoshop', 'Java', 'Photoshop', 'active'),
+(119, 28, 'What is the purpose of a firewall in computer security?', 'To block unwanted emails', 'To prevent overheating of the computer', 'To protect against unauthorized access and cyber threats', 'To boost internet speed', 'To protect against unauthorized access and cyber threats', 'active');
 
 -- --------------------------------------------------------
 
@@ -217,7 +496,7 @@ CREATE TABLE `exam_tbl` (
 --
 
 INSERT INTO `exam_tbl` (`ex_id`, `cou_id`, `ex_title`, `ex_time_limit`, `ex_questlimit_display`, `ex_description`, `ex_created`) VALUES
-(28, 68, 'Career Advice Test', '60', 60, 'Read carefully the following questions.', '2023-09-14 16:57:14');
+(28, 69, 'Career Advice Test', '60', 80, 'Read carefully the following questions.', '2023-09-26 11:04:54');
 
 -- --------------------------------------------------------
 
@@ -317,31 +596,31 @@ ALTER TABLE `course_tbl`
 -- AUTO_INCREMENT for table `examinee_tbl`
 --
 ALTER TABLE `examinee_tbl`
-  MODIFY `exmne_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `exmne_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `exam_answers`
 --
 ALTER TABLE `exam_answers`
-  MODIFY `exans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
+  MODIFY `exans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=558;
 
 --
 -- AUTO_INCREMENT for table `exam_attempt`
 --
 ALTER TABLE `exam_attempt`
-  MODIFY `examat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `examat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `exam_question_tbl`
 --
 ALTER TABLE `exam_question_tbl`
-  MODIFY `eqt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `eqt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT for table `exam_tbl`
 --
 ALTER TABLE `exam_tbl`
-  MODIFY `ex_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `ex_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `feedbacks_tbl`
