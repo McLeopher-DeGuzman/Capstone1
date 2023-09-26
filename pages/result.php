@@ -89,8 +89,8 @@
              <div class="card mb-3 widget-content bg-happy-green">
                 <div class="widget-content-wrapper text-white">
                     <div class="widget-content-left">
-                        <div class="widget-heading" style=""><h5>Percentage</h5><br></div>
-                        <div class="widget-subheading" style="color: transparent;">/</div>
+                        <div class="widget-heading" style=""><h6>Percentage</h6><br></div>
+                        <!-- <div class="widget-subheading" style="color: black">qwerty</div> -->
                         </div>
                         <div class="widget-content-right">
                         <div class="widget-numbers text-white">
@@ -99,30 +99,71 @@
                             ?>
                             <span>
                                 <!-- <?php 
+                                $score = $selScore->rowCount();
+                                $ans = $score / $over * 100;
+                                $formattedAns = number_format($ans, 2);
+
+                                echo $formattedAns . "%";
+                                                                                        
+                                if ($formattedAns >= 30.00 && $formattedAns <= 40.00) {
+                                    echo " bsit";
+                                }
+                                elseif ($formattedAns >= 40.00 && $formattedAns <= 50.00) {
+                                    echo "bsba";
+                                }
+                                ?> -->
+                                <?php
                                     $score = $selScore->rowCount();
                                     $ans = $score / $over * 100;
-                                    echo number_format($ans,2);
-                                    echo "%";
-                                    
-                                 ?> -->
+                                    $formattedAns = number_format($ans, 2);
 
-<?php 
-                            $score = $selScore->rowCount();
-                            $ans = $score / $over * 100;
-                            echo number_format($ans, 2);
-                            echo "%";
+                                    echo $formattedAns . "%";
 
-                            // Check if the percentage is 50 and print "BSIt" if true
-                            if ($ans == 50.00) {
-                                echo " BSIt";
-                            }
-                        ?>
+                                    $subject = ""; // Initialize the subject variable
+
+                                    if ($formattedAns >= 30.00 && $formattedAns <= 40.00) {
+                                        echo " bsit";
+                                        $subject = "bsit"; // Assign the subject they excel in
+                                    } elseif ($formattedAns >= 40.00 && $formattedAns <= 50.00) {
+                                        echo " ";
+                                        $subject = "bsba"; // Assign the subject they excel in
+                                    } else {
+                                        echo " Unknown subject"; // Default case if the percentage doesn't match any subject
+                                        $subject = "unknown";
+                                    }
+
+                                    // Now you can use the $subject variable to further process or display the subject they excel in
+                                    echo "Subject: " . $subject;
+                                    ?>
+
+                    
                             </span> 
+                        </div>
+                        <div> 
+                            <span>
+                            <div class="widget-heading" style="color: white">Course Recommendation</div>
+
+                            </span>
+                            <?php
+                                if ($formattedAns >= 30.00 && $formattedAns <= 40.00) {
+                                    echo " bsit";
+                                }
+                                elseif ($formattedAns >= 40.00 && $formattedAns <= 50.00) {
+                                    echo "Bachelor Of Walang Kwenta";
+                                }
+                                ?> 
+                                
                         </div>
                     </div>
                 </div>
             </div>
-            <style>
+            <div>
+                <a href="./chatbot/index.html">
+            <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning" style="top: 110px !important;">
+    <i class="fa fa-comments fa-2x"></i>
+</button>
+            </div>
+            <!-- <style>
                 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -246,7 +287,7 @@
                 </body>
             </div>
         </div>
-    </div>
+    </div> -->
     
 
     </div>

@@ -33,11 +33,11 @@
             <ul class="vertical-nav-menu">
 
          
-                <li class="app-sidebar__heading">AVAILABLE EXAM'S</li>
+                <li class="app-sidebar__heading">AVAILABLE TEST</li>
                 <li>
                 <a href="#">
                       <i class="metismenu-icon pe-7s-display2"></i> 
-                     All Exam's
+                     All Exam's/ Test
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
                 <ul >
@@ -75,7 +75,7 @@
                 </ul>
                 </li>
 
-                 <li class="app-sidebar__heading">TAKEN EXAM'S</li>
+                 <li class="app-sidebar__heading">TAKEN TEST</li>
                 <li>
                   <?php 
                     $selTakenExam = $conn->query("SELECT * FROM exam_tbl et INNER JOIN exam_attempt ea ON et.ex_id = ea.exam_id WHERE exmne_id='$exmneId' ORDER BY ea.examat_id  ");
